@@ -54,14 +54,12 @@ public class CoffeeMachine {
         CoffeeMachine c = new CoffeeMachine();
         Scanner sc = new Scanner(System.in);
         int cleanCounter = 0;
-
-       // c.standing(c.water, c.milk, c.coffeeBeans, c.cups, c.money);
+        
         System.out.println();
         String chosen;
         String menu1 = "Write action (buy, fill, take, clean, remaining, exit): ";
-      //  System.out.println("Write action (buy, fill, take, remaining, exit): ");
+
         do {
-          //  System.out.println();
             System.out.println(menu1);
             chosen = sc.nextLine();
 
@@ -73,7 +71,7 @@ public class CoffeeMachine {
                     }
                     System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:");
                     chosen = sc.nextLine();
-                    //sc.nextLine();
+                    
                     if(chosen.equals("back")){
                         break;
                     }
@@ -82,14 +80,12 @@ public class CoffeeMachine {
                     System.out.println();
                     cleanCounter++;
                     break;
-                // c.standing(c.water,c.milk,c.coffeeBeans,c.cups,c.money);
 
                 case "fill":
                     c.fill(sc);
                     System.out.println();
 
                     break;
-                    //   c.standing(c.water,c.milk,c.coffeeBeans,c.cups,c.money);
 
                 case "clean":
                     System.out.println("I have been cleaned!");
@@ -100,7 +96,7 @@ public class CoffeeMachine {
                     System.out.println();
                     c.take(c.money);
                     break;
-                    //   c.standing(c.water,c.milk,c.coffeeBeans,c.cups,c.money);
+                
                 case "remaining":
                     System.out.println();
                     c.standing(c.water,c.milk,c.coffeeBeans,c.cups,c.money);
@@ -173,7 +169,7 @@ public class CoffeeMachine {
 
     // fill Methode
     public void fill(Scanner sc ){
-       // Scanner sc = new Scanner(System.in);
+    
         System.out.println("Write how many ml of water you want to add: ");
         int waterAdd = sc.nextInt();
         sc.nextLine();
